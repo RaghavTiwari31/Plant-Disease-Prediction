@@ -1,0 +1,187 @@
+{
+  "Apple___Apple_scab": {
+    "display_name": "Apple Scab",
+    "plant": "Apple",
+    "status": "Diseased",
+    "disease_name": "Apple Scab",
+    "pathogen": "Venturia inaequalis (Ascomycete Fungus)",
+    "severity": "Moderate to High",
+    "symptoms": [
+      "Olive-green to dull brown velvety spots on upper and lower leaf surfaces",
+      "Lesions may turn blackish, crusty, and corky over time",
+      "Premature leaf drop causing progressive tree defoliation",
+      "Fruit develops scabby, cracked, misshapen brown lesions"
+    ],
+    "prevention_and_treatment": [
+      "Rake and destroy fallen leaves in autumn to disrupt overwintering fungal ascocarps",
+      "Prune canopies during winter to optimize airflow and accelerate leaf drying",
+      "Apply protective fungicides (e.g. copper, sulfur, captan) early in the growing season from green tip to petal fall",
+      "Plant scab-resistant apple cultivars such as Liberty, Enterprise, or Freedom"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Apple___healthy": {
+    "display_name": "Apple (Healthy)",
+    "plant": "Apple",
+    "status": "Healthy",
+    "disease_name": "None",
+    "pathogen": "None",
+    "severity": "None",
+    "symptoms": [
+      "Vibrant green leaves with smooth, uniform margins",
+      "No chlorosis, necrosis, discoloration, or pustules present",
+      "Active vigorous vegetative growth and intact leaf cuticle"
+    ],
+    "prevention_and_treatment": [
+      "Maintain regular drip or base irrigation; avoid wetting foliage",
+      "Apply balanced N-P-K fertilizer and micronutrients based on soil testing",
+      "Monitor orchards seasonally for early pest and disease pressure",
+      "Keep standard preventative sanitation and annual pruning practices"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Blueberry___healthy": {
+    "display_name": "Blueberry (Healthy)",
+    "plant": "Blueberry",
+    "status": "Healthy",
+    "disease_name": "None",
+    "pathogen": "None",
+    "severity": "None",
+    "symptoms": [
+      "Glossy, deep green, elliptical foliage free of spots or blotches",
+      "Clean leaf undersides with no fungal sporulation or webbing",
+      "Healthy apical shoots and typical acidic-soil growth vigor"
+    ],
+    "prevention_and_treatment": [
+      "Maintain acidic soil pH between 4.5 and 5.2 using pine bark mulch or elemental sulfur",
+      "Ensure consistent root moisture without standing water or root waterlogging",
+      "Protect root zone with 3-4 inches of organic mulch to regulate soil temperature",
+      "Conduct regular scouting for early signs of mummy berry or stem blight"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Corn_(maize)___Common_rust_": {
+    "display_name": "Corn Common Rust",
+    "plant": "Corn (Maize)",
+    "status": "Diseased",
+    "disease_name": "Common Rust",
+    "pathogen": "Puccinia sorghi (Basidiomycete Fungus)",
+    "severity": "Moderate",
+    "symptoms": [
+      "Small, circular to elongated golden-brown to cinnamon pustules (uredinia) on both leaf surfaces",
+      "Pustules rupture epidermal tissue, releasing powdery reddish-brown rust spores",
+      "Pustules darken to brownish-black late in the season as teliospores develop",
+      "Severe infections lead to leaf chlorosis, necrosis, and reduced ear fill"
+    ],
+    "prevention_and_treatment": [
+      "Plant rust-resistant corn hybrid varieties containing specific Rp resistance genes",
+      "Plant early in the season to reduce exposure to windborne spores migrating from southern regions",
+      "Scout lower to mid-canopy leaves around the whorl to tasseling stages",
+      "Apply labeled triazole or strobilurin fungicides when pustule coverage reaches economic threshold"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Corn_(maize)___healthy": {
+    "display_name": "Corn (Healthy)",
+    "plant": "Corn (Maize)",
+    "status": "Healthy",
+    "disease_name": "None",
+    "pathogen": "None",
+    "severity": "None",
+    "symptoms": [
+      "Even, uniform deep green leaf blades with continuous parallel venation",
+      "Free of lesions, spots, mosaic streaks, or insect chew marks",
+      "Strong stalk integrity and active photosynthetically efficient canopy"
+    ],
+    "prevention_and_treatment": [
+      "Ensure balanced nitrogen application across key vegetative growth stages",
+      "Practice crop rotation with non-host legumes (e.g., soybeans) to suppress pest buildup",
+      "Maintain weed management in early whorl stages to prevent moisture competition",
+      "Ensure adequate soil drainage to avoid nitrogen leaching and root rot"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Grape___Black_rot": {
+    "display_name": "Grape Black Rot",
+    "plant": "Grape",
+    "status": "Diseased",
+    "disease_name": "Black Rot",
+    "pathogen": "Guignardia bidwellii (Fungus)",
+    "severity": "High (Destructive)",
+    "symptoms": [
+      "Small circular tan to reddish-brown necrotic spots with dark margins on leaves",
+      "Tiny black specks (pycnidia fruiting bodies) arranged in rings inside leaf lesions",
+      "Infected berries turn pale, soften, turn purple, and shrivel into hard black mummies",
+      "Dark sunken elliptical cankers on shoots, petioles, and tendrils"
+    ],
+    "prevention_and_treatment": [
+      "Remove and destroy all mummified berries and pruned canes during dormant winter season",
+      "Train grape canopies on vertical trellises to maximize sunlight penetration and air movement",
+      "Apply preventative fungicides (mancozeb, captan, or myclobutanil) starting at bud break until 4-5 weeks post-bloom",
+      "Avoid overhead sprinkler irrigation that keeps leaves wet for extended durations"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Grape___healthy": {
+    "display_name": "Grape (Healthy)",
+    "plant": "Grape",
+    "status": "Healthy",
+    "disease_name": "None",
+    "pathogen": "None",
+    "severity": "None",
+    "symptoms": [
+      "Broad, vibrant green leaves with distinct lobes and clear palmate veins",
+      "Supple leaf texture with intact margins and clean petioles",
+      "No mildew film, necrotic spots, chlorotic halos, or berry blemishes"
+    ],
+    "prevention_and_treatment": [
+      "Maintain active canopy management including suckering, shoot positioning, and selective leaf pulling",
+      "Manage vineyard floor with clean cover crops to suppress weeds and encourage beneficial insects",
+      "Irrigate deeply at root depth during veraison according to soil moisture sensors",
+      "Monitor vineyards regularly for preventative pest and mildew management"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "display_name": "Bell Pepper Bacterial Spot",
+    "plant": "Bell Pepper",
+    "status": "Diseased",
+    "disease_name": "Bacterial Spot",
+    "pathogen": "Xanthomonas campestris pv. vesicatoria (Bacterium)",
+    "severity": "High",
+    "symptoms": [
+      "Small, water-soaked, circular to irregular dark brown lesions on leaves",
+      "Lesions often develop a distinctive yellow chlorotic halo around necrotic centers",
+      "Severely affected leaves yellow, scorch, and drop prematurely, causing sunscald on fruits",
+      "Raised, blister-like or scab-like warty spots on developing peppers"
+    ],
+    "prevention_and_treatment": [
+      "Use certified disease-free seed and hot water seed treatment (50°C for 25 minutes)",
+      "Avoid overhead irrigation; use drip lines to keep foliage completely dry",
+      "Practice 2-3 year crop rotation with non-solanaceous crops (avoid tomatoes, potatoes, eggplants)",
+      "Apply copper bactericides combined with mancozeb, or plant resistant bell pepper varieties"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  },
+  "Pepper,_bell___healthy": {
+    "display_name": "Bell Pepper (Healthy)",
+    "plant": "Bell Pepper",
+    "status": "Healthy",
+    "disease_name": "None",
+    "pathogen": "None",
+    "severity": "None",
+    "symptoms": [
+      "Lush, dark emerald green foliage with smooth, glossy surface",
+      "Sturdy branching stems with healthy, intact leaf petioles",
+      "Even blossom sets and no signs of bacterial ooze, lesions, or curling"
+    ],
+    "prevention_and_treatment": [
+      "Provide consistent soil moisture (1-2 inches per week) to prevent calcium deficiency and blossom end rot",
+      "Mulch soil bed with straw or reflective plastic to regulate root temperature and prevent soil splash",
+      "Supply adequate calcium and magnesium alongside balanced nitrogen fertilization",
+      "Scout weekly for aphid, thrip, and hornworm activity"
+    ],
+    "disclaimer": "This analysis is for educational and experimental research purposes only. Consult an agricultural extension specialist or licensed agronomist for certified field treatment."
+  }
+}
+

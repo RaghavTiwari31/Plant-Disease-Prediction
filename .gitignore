@@ -1,0 +1,103 @@
+# ==============================================================================
+# Python & Bytecode
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linting
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# ==============================================================================
+# Virtual Environments
+# ==============================================================================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Datasets & Heavy Artifacts
+# ==============================================================================
+# Raw PlantVillage image dataset (~GBs) and source archives
+data/raw/
+data/*.zip
+data/*.tar*
+data/*.gz
+data/temp_inference.jpg
+
+# Cached feature matrices (HOG/HSV/LBP NumPy dumps ~335MB)
+data/features/
+
+# Explicitly KEEP reproducibility split manifest and evaluation plots
+!data/splits.csv
+!data/charts/
+!data/charts/**
+
+# ==============================================================================
+# Model Weights & Checkpoints
+# ==============================================================================
+# Note: models/svm.joblib (166 MB) exceeds GitHub's 100 MB hard limit.
+# DL checkpoints (resnet18.pt, cnn.pt) can be shared via Git LFS or GitHub Releases.
+models/*.joblib
+models/*.pt
+models/*.pth
+models/*.bin
+models/*.onnx
+models/*.pkl
+
+# Explicitly KEEP benchmark metrics JSON files (needed by Streamlit & reporting)
+!models/*.json
+
+# ==============================================================================
+# Jupyter Notebooks & Streamlit
+# ==============================================================================
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+.streamlit/secrets.toml
+
+# ==============================================================================
+# IDEs, Editors & OS Files
+# ==============================================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Reference materials
+Hand_Sign_Detection_Report.pdf
+

@@ -1,0 +1,76 @@
+Phase 1: Setup, Data and Exploration
+
+Objective: a clean, leak-free dataset split you can trust.
+
+Tasks
+
+Set up the venv and install the requirements.
+Download PlantVillage from Kaggle (folder-per-class, easy to load). Use the color version only. Check the version’s folder structure and class count yourself and record it in your report, rather than assuming the commonly quoted numbers.
+Scan all images: count per class, find corrupted files (try opening each with Pillow), check resolutions.
+Plot class distribution and a sample grid (one image per class).
+Leakage control: PlantVillage contains near-duplicate images of the same leaf. Compute a perceptual hash (imagehash) per image, cluster near-identical hashes into groups, and split by group using StratifiedGroupKFold or GroupShuffleSplit. Target ~70/15/15. Save the result to data/splits.csv so every model uses identical splits.
+Define transforms: resize, normalize, and light augmentation (flip, small rotation, brightness/contrast jitter). Avoid heavy color jitter, since color is a disease signal.
+
+Files: src/data.py, notebooks/01_explore.ipynb
+Output: splits.csv, 2 to 3 exploration charts.
+Done when: the splits load, class counts are tabulated, and no hash group appears in more than one split.
+CPU tip: if training is too slow later, cap images per class (e.g. 300 to 500) for SVM and CNN experiments.
+
+Phase 2: Traditional ML (HOG + SVM)
+
+Objective: the pattern recognition and feature extraction core of the assignment.
+
+Tasks
+
+In features.py, extract per image (resize to ~128×128):
+HOG on the grayscale image (shape and texture/gradient patterns).
+HSV histogram plus channel mean/std (color of lesions and chlorosis).
+LBP histogram (texture).
+Optional: GLCM, only if time allows.
+Concatenate the features, then apply StandardScaler, then optionally PCA (keep ~95% variance).
+Train an SVM (RBF kernel) with a small GridSearchCV over C and gamma on a subsample, then fit on the full train set.
+Evaluate on validation and test, save with Joblib.
+Cache the extracted features to .npy so you don’t recompute them.
+
+Files: src/features.py, src/train_svm.py, src/evaluate.py (basic version)
+Output: models/svm.joblib, first metrics (accuracy, macro F1, confusion matrix).
+Done when: SVM test metrics are saved and you can explain what each feature group captures.
+
+Phase 3: Deep Learning (CNN + ResNet18) and Evaluation
+
+Objective: train the two DL models and compare all three fairly.
+
+Tasks
+
+Small CNN (input 128×128): 3 to 4 blocks of Conv, BatchNorm, ReLU, MaxPool with 32, 64, 128 and 256 filters, then global average pooling, dropout, and a linear layer (the classifier head). Small enough to train on CPU.
+ResNet18 (input 224, or 160 to save CPU time): load ImageNet weights, replace the final layer. Stage 1: freeze the backbone and train the head (~3 epochs). Stage 2: unfreeze layer4 and fine-tune with a lower learning rate (~3 to 5 epochs).
+Shared training settings: cross-entropy loss, Adam, batch size 32, LR 1e-3 for CNN and head, 1e-4 for fine-tuning, ReduceLROnPlateau, early stopping (patience 3), save the best checkpoint by validation loss, fixed random seed. Use class weights only if the imbalance looks significant.
+In evaluate.py, on the same test split for all three models, report accuracy, macro and weighted F1, precision/recall, training time, inference time per image, and model file size.
+Charts: train/val curves, confusion matrix, model comparison bar chart, a few correct and incorrect predictions. Save everything to models/metrics.json so the UI can read it.
+Stretch (only after the above is done): PlantDoc external test. Map matching class names, skip the ones with no match, and report the results separately from the PlantVillage test. A big accuracy drop is a legitimate finding about domain shift.
+
+Files: src/models.py, src/train_dl.py, src/evaluate.py, src/predict.py
+Output: cnn.pt, resnet18.pt, metrics.json, comparison charts.
+Done when: all three models have test metrics on the same split and predict.py can load any model and classify one image.
+Colab: worth using for ResNet18 if the lab PC is slow. Just copy models/ back afterwards.
+
+Phase 4: Streamlit App, Testing and Report
+
+Objective: a working, good-looking demo and the submission documents.
+
+Streamlit pages (4)
+
+Home: title, overview, dataset summary, model performance summary table (read from metrics.json).
+Detect: upload image, preview, model selector, Predict button, then predicted class, confidence, top-3 bar chart, and the disease info card (symptoms, prevention, and a note that this is educational rather than professional diagnosis).
+Models and Dataset: accuracy and macro F1 comparison, confusion matrices, timing and size table, plus class distribution and sample images.
+About: methodology, architectures, dataset sources and licenses, limitations, future work.
+
+Implementation notes: load models once with @st.cache_resource, reuse the exact same preprocessing function as training (via predict.py), and wrap uploads in try/except for invalid or non-image files. The app must work fully offline.
+
+Minimal tests (pytest): dataset loads and labels map correctly, preprocessing output shape, model save/load round-trip, same image gives the same prediction twice, a corrupt file is rejected gracefully.
+
+Report outline: abstract, introduction and objectives, dataset, preprocessing, feature extraction (HOG, color, LBP), models, implementation and architecture diagram, results and comparison, external test (if done), UI screenshots, conclusion, limitations and future scope, references.
+
+Lab demo sequence (about 5 minutes): show dataset samples, show the feature extraction visualization (HOG image), upload a leaf in the app, compare predictions across the three models, then show the metrics page.
+
+Done when: the app runs from a fresh streamlit run app/Home.py, the tests pass, and the report is complete.

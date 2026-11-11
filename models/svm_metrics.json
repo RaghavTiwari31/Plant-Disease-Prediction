@@ -1,0 +1,452 @@
+{
+  "model": "SVM (RBF)",
+  "feature_pipeline": {
+    "hog": true,
+    "hsv": true,
+    "lbp": true,
+    "scaler": "StandardScaler",
+    "pca": true,
+    "pca_components": 1859
+  },
+  "best_params": {
+    "svm__estimator__C": 100.0,
+    "svm__estimator__gamma": 0.0001
+  },
+  "grid_search_time_s": 53.86,
+  "train_time_s": 358.35,
+  "inference_time_per_image_ms": 10.671,
+  "model_size_mb": 158.54,
+  "cap_per_class": 400,
+  "val": {
+    "split": "val",
+    "accuracy": 0.8945745992601726,
+    "macro_f1": 0.8822060406694772,
+    "weighted_f1": 0.8936917730945915,
+    "macro_precision": 0.8841373203984774,
+    "macro_recall": 0.8815020407266527,
+    "confusion_matrix": [
+      [
+        66,
+        22,
+        6,
+        2,
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      [
+        14,
+        240,
+        10,
+        4,
+        0,
+        0,
+        1,
+        5,
+        1
+      ],
+      [
+        4,
+        8,
+        203,
+        2,
+        0,
+        0,
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        177,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        164,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        165,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        48,
+        0,
+        3
+      ],
+      [
+        3,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        126,
+        20
+      ],
+      [
+        2,
+        4,
+        1,
+        3,
+        0,
+        0,
+        0,
+        22,
+        262
+      ]
+    ],
+    "class_names": [
+      "Apple___Apple_scab",
+      "Apple___healthy",
+      "Blueberry___healthy",
+      "Corn_(maize)___Common_rust_",
+      "Corn_(maize)___healthy",
+      "Grape___Black_rot",
+      "Grape___healthy",
+      "Pepper,_bell___Bacterial_spot",
+      "Pepper,_bell___healthy"
+    ],
+    "per_class_report": {
+      "Apple___Apple_scab": {
+        "precision": 0.717391304347826,
+        "recall": 0.6226415094339622,
+        "f1-score": 0.6666666666666666,
+        "support": 106.0
+      },
+      "Apple___healthy": {
+        "precision": 0.8664259927797834,
+        "recall": 0.8727272727272727,
+        "f1-score": 0.8695652173913043,
+        "support": 275.0
+      },
+      "Blueberry___healthy": {
+        "precision": 0.918552036199095,
+        "recall": 0.9144144144144144,
+        "f1-score": 0.9164785553047404,
+        "support": 222.0
+      },
+      "Corn_(maize)___Common_rust_": {
+        "precision": 0.921875,
+        "recall": 1.0,
+        "f1-score": 0.959349593495935,
+        "support": 177.0
+      },
+      "Corn_(maize)___healthy": {
+        "precision": 1.0,
+        "recall": 0.9820359281437125,
+        "f1-score": 0.9909365558912386,
+        "support": 167.0
+      },
+      "Grape___Black_rot": {
+        "precision": 0.9821428571428571,
+        "recall": 0.9649122807017544,
+        "f1-score": 0.9734513274336283,
+        "support": 171.0
+      },
+      "Grape___healthy": {
+        "precision": 0.8727272727272727,
+        "recall": 0.8727272727272727,
+        "f1-score": 0.8727272727272727,
+        "support": 55.0
+      },
+      "Pepper,_bell___Bacterial_spot": {
+        "precision": 0.7777777777777778,
+        "recall": 0.8129032258064516,
+        "f1-score": 0.7949526813880127,
+        "support": 155.0
+      },
+      "Pepper,_bell___healthy": {
+        "precision": 0.9003436426116839,
+        "recall": 0.891156462585034,
+        "f1-score": 0.8957264957264958,
+        "support": 294.0
+      },
+      "accuracy": 0.8945745992601726,
+      "macro avg": {
+        "precision": 0.8841373203984774,
+        "recall": 0.8815020407266527,
+        "f1-score": 0.8822060406694772,
+        "support": 1622.0
+      },
+      "weighted avg": {
+        "precision": 0.8937139755649374,
+        "recall": 0.8945745992601726,
+        "f1-score": 0.8936917730945915,
+        "support": 1622.0
+      }
+    }
+  },
+  "test": {
+    "split": "test",
+    "accuracy": 0.8745874587458746,
+    "macro_f1": 0.8664928180680286,
+    "weighted_f1": 0.8748541317950109,
+    "macro_precision": 0.8742509014830443,
+    "macro_recall": 0.8625689256738012,
+    "confusion_matrix": [
+      [
+        61,
+        17,
+        2,
+        4,
+        0,
+        1,
+        1,
+        6,
+        1
+      ],
+      [
+        7,
+        220,
+        21,
+        1,
+        0,
+        0,
+        0,
+        12,
+        5
+      ],
+      [
+        5,
+        4,
+        185,
+        4,
+        0,
+        0,
+        0,
+        8,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        164,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        3,
+        168,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        3,
+        0,
+        0,
+        0,
+        168,
+        1,
+        5,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        3,
+        53,
+        0,
+        3
+      ],
+      [
+        3,
+        0,
+        2,
+        4,
+        0,
+        0,
+        0,
+        109,
+        21
+      ],
+      [
+        1,
+        2,
+        3,
+        3,
+        0,
+        0,
+        0,
+        21,
+        197
+      ]
+    ],
+    "class_names": [
+      "Apple___Apple_scab",
+      "Apple___healthy",
+      "Blueberry___healthy",
+      "Corn_(maize)___Common_rust_",
+      "Corn_(maize)___healthy",
+      "Grape___Black_rot",
+      "Grape___healthy",
+      "Pepper,_bell___Bacterial_spot",
+      "Pepper,_bell___healthy"
+    ],
+    "per_class_report": {
+      "Apple___Apple_scab": {
+        "precision": 0.7625,
+        "recall": 0.6559139784946236,
+        "f1-score": 0.7052023121387283,
+        "support": 93.0
+      },
+      "Apple___healthy": {
+        "precision": 0.8906882591093117,
+        "recall": 0.8270676691729323,
+        "f1-score": 0.8576998050682261,
+        "support": 266.0
+      },
+      "Blueberry___healthy": {
+        "precision": 0.8644859813084113,
+        "recall": 0.8767772511848341,
+        "f1-score": 0.8705882352941177,
+        "support": 211.0
+      },
+      "Corn_(maize)___Common_rust_": {
+        "precision": 0.8913043478260869,
+        "recall": 1.0,
+        "f1-score": 0.9425287356321839,
+        "support": 164.0
+      },
+      "Corn_(maize)___healthy": {
+        "precision": 1.0,
+        "recall": 0.9767441860465116,
+        "f1-score": 0.9882352941176471,
+        "support": 172.0
+      },
+      "Grape___Black_rot": {
+        "precision": 0.9767441860465116,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9545454545454546,
+        "support": 180.0
+      },
+      "Grape___healthy": {
+        "precision": 0.9636363636363636,
+        "recall": 0.8412698412698413,
+        "f1-score": 0.8983050847457628,
+        "support": 63.0
+      },
+      "Pepper,_bell___Bacterial_spot": {
+        "precision": 0.6770186335403726,
+        "recall": 0.7841726618705036,
+        "f1-score": 0.7266666666666667,
+        "support": 139.0
+      },
+      "Pepper,_bell___healthy": {
+        "precision": 0.8418803418803419,
+        "recall": 0.8678414096916299,
+        "f1-score": 0.8546637744034707,
+        "support": 227.0
+      },
+      "accuracy": 0.8745874587458746,
+      "macro avg": {
+        "precision": 0.8742509014830443,
+        "recall": 0.8625689256738012,
+        "f1-score": 0.8664928180680286,
+        "support": 1515.0
+      },
+      "weighted avg": {
+        "precision": 0.8779877914779158,
+        "recall": 0.8745874587458746,
+        "f1-score": 0.8748541317950109,
+        "support": 1515.0
+      }
+    },
+    "sample_predictions": {
+      "correct": [
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Grape___Black_rot\\8dab24e5-2ad7-4f6a-b093-be86f1c08046___FAM_B.Rot 0494.JPG",
+          "true_class": "Grape___Black_rot",
+          "pred_class": "Grape___Black_rot",
+          "confidence": 0.7836
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Corn_(maize)___Common_rust_\\RS_Rust 1577.JPG",
+          "true_class": "Corn_(maize)___Common_rust_",
+          "pred_class": "Corn_(maize)___Common_rust_",
+          "confidence": 0.8583
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Grape___Black_rot\\89a2ecc2-8ecd-405e-ab7d-7ab6fc20c99d___FAM_B.Rot 3201.JPG",
+          "true_class": "Grape___Black_rot",
+          "pred_class": "Grape___Black_rot",
+          "confidence": 0.7931
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Apple___healthy\\801956aa-445e-4bb8-90bb-49dcea55c679___RS_HL 5865.JPG",
+          "true_class": "Apple___healthy",
+          "pred_class": "Apple___healthy",
+          "confidence": 0.7672
+        }
+      ],
+      "incorrect": [
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Apple___Apple_scab\\0672ab32-9fce-41f3-ae69-e39c48a0a292___FREC_Scab 3347.JPG",
+          "true_class": "Apple___Apple_scab",
+          "pred_class": "Apple___healthy",
+          "confidence": 0.73
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Pepper,_bell___healthy\\6b3bf816-2c6b-4a71-93a3-9815bea001a6___JR_HL 7935.JPG",
+          "true_class": "Pepper,_bell___healthy",
+          "pred_class": "Pepper,_bell___Bacterial_spot",
+          "confidence": 0.4398
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Blueberry___healthy\\55892d79-cc48-46b3-aa31-af67283c21fb___RS_HL 0401.JPG",
+          "true_class": "Blueberry___healthy",
+          "pred_class": "Pepper,_bell___healthy",
+          "confidence": 0.8477
+        },
+        {
+          "path": "R:\\Projects\\PRCV_proj\\data\\raw\\color\\Apple___Apple_scab\\c9535536-7e19-474d-9ea2-734d4576e6b7___FREC_Scab 2977.JPG",
+          "true_class": "Apple___Apple_scab",
+          "pred_class": "Apple___healthy",
+          "confidence": 0.6859
+        }
+      ]
+    }
+  }
+}
